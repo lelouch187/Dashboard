@@ -1,6 +1,6 @@
 import FilterPanel from './components/FilterPanel';
-import { JobList } from './components/JobList';
-import { TheHeader } from './components/TheHeader';
+import JobList from './components/JobList';
+import TheHeader from './components/TheHeader';
 import { FC } from 'react';
 
 const App: FC = () => {

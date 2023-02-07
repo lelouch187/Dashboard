@@ -1,16 +1,17 @@
 import { FC } from 'react';
-import { IBadge } from '../@types/types';
-import data from '../mock/data.json';
+import { useSelector } from 'react-redux';
+import { selectCard } from '../redux/slice/cardSlice';
 import JobPosition from './JobPosition';
 
 const JobList: FC = () => {
+  const data = useSelector(selectCard)
   return (
     <div className="job-list">
-      {data.map((item:IBadge) => (
+      {data.map((item) => (
         <JobPosition key={item.id} badge={item} />
       ))}
     </div>
   );
 };
 
-export { JobList };
+export default JobList;

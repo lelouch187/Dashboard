@@ -1,7 +1,7 @@
-const TheHeader = () => {
-  return (
-    <header className='header' />
-  )
-}
+import { FC } from 'react';
 
-export {TheHeader};
+const TheHeader: FC = () => {
+  return <header className="header" />;
+};
+
+export default TheHeader;

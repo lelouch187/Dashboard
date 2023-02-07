@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { IBadge } from '../@types/types';
 import { useAppDispatch } from '../redux';
 import { addBadge } from '../redux/slice/badgeSlise';
+import { filterCard } from '../redux/slice/cardSlice';
 import Badge, { ColorSchemeType, VariantType } from '../UI/Badge';
 import Card from '../UI/Card';
 import Stack from '../UI/Stack';
@@ -61,7 +62,10 @@ const JobPosition: FC<IJobPositionProps> = ({ badge }) => {
         <Stack>
           {badgesArr.map((item) => (
             <Badge 
-              onAddBage={()=>dispatch(addBadge(item))}
+              onAddBage={()=>{
+                dispatch(addBadge(item))
+                dispatch(filterCard(item))
+              }}
               key={item}>
               {item}
             </Badge>

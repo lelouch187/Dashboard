@@ -18,6 +18,7 @@ const badgesSlise = createSlice({
         removeBadge:(state,{payload}:PayloadAction<string>)=>{          
            return state.filter(badge=>badge!==payload)
         },
+        
     }
 })
 export const selectBadge = (state:RootState)=>state.badge

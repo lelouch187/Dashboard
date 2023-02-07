@@ -11,5 +11,5 @@ export interface IBadge {
     contract:string;
     location:string;
     languages:string[];
-    tools:[]|string[];
+    tools:string[];
 }
