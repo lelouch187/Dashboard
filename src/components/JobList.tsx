@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { selectCard } from '../redux/slice/cardSlice';
+import { selectCard } from '../redux/slice/badgeSlise';
 import JobPosition from './JobPosition';
 
 const JobList: FC = () => {
